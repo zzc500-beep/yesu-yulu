@@ -1,1 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>《耶稣语录》十条正式结构测试版</title>
 
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Noto Serif SC","Microsoft YaHei",serif;
+    background:#f5f5f5;
+    color:#222;
+    line-height:2;
+}
+
+/* 顶部 */
+
+.header{
+    background:#111827;
+    color:white;
+    padding:30px 20px;
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#d1d5db;
+}
+
+/* 总布局 */
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/* 左侧目录 */
+
+.sidebar{
+    width:320px;
+    background:white;
+    border-right:1px solid #ddd;
+    padding:25px;
+    overflow-y:auto;
+    position:sticky;
+    top:0;
+    height:100vh;
+}
+
+.sidebar h2{
+    margin-bottom:15px;
+    color:#111827;
+    font-size:22px;
+}
+
+.sidebar h3{
+    margin-top:25px;
+    margin-bottom:10px;
+    color:#2563eb;
+    font-size:18px;
+}
+
+.sidebar a{
+    display:block;
+    padding:6px 0;
+    text-decoration:none;
+    color:#333;
+    font-size:15px;
+}
+
+.sidebar a:hover{
+    color:#2563eb;
+}
+
+/* 右侧正文 */
+
+.content{
+    flex:1;
+    padding:40px;
+}
+
+/* 卡片 */
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    margin-bottom:35px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+}
+
+/* 标题 */
+
+.card h2{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#111827;
+}
+
+/* 经文 */
+
+.scripture{
+    background:#f9fafb;
+    border-left:5px solid #2563eb;
+    padding:20px;
+    margin-bottom:30px;
+    white-space:pre-line;
+    font-size:17px;
+}
+
+/* 经文解析 */
+
+.analysis-title{
+    font-size:24px;
+    margin-bottom:20px;
+    color:#111827;
+}
+
+/* 七段式 */
+
+.section-title{
+    margin-top:30px;
+    margin-bottom:12px;
+    font-size:22px;
+    color:#111827;
+    font-weight:bold;
+}
+
+p{
+    margin-bottom:16px;
+}
+
+/* 导航 */
+
+.bottom-nav{
+    margin-top:40px;
+    border-top:1px solid #ddd;
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.bottom-nav a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.bottom-nav a:hover{
+    text-decoration:underline;
+}
+
+/* 手机版 */
+
+.mobile-menu{
+    display:none;
+}
+
+/* 手机适配 */
+
+@media (max-width:900px){
+
+.layout{
+    display:block;
+}
+
+.sidebar{
+    display:none;
+}
+
+.mobile-menu{
+    display:block;
+    background:white;
+    padding:20px;
+    border-bottom:1px solid #ddd;
+}
+
+.mobile-menu details{
+    margin-bottom:15px;
+}
+
+.mobile-menu summary{
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-bottom:10px;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:6px 0;
+    text-decoration:none;
+    color:#333;
+}
+
+.content{
+    padding:20px;
+}
+
+.card{
+    padding:22px;
+}
+
+.card h2{
+    font-size:24px;
+}
+
+.section-title{
+    font-size:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body id="top">
+
+<!-- 顶部 -->
+
+<div class="header">
+<h1>《耶稣语录》</h1>
+<p>十条正式结构测试版</p>
+</div>
+
+<!-- 手机版目录 -->
+
+<div class="mobile-menu">
+
+<details open>
+<summary>① 顺序阅读</summary>
+
+<a href="#c1">1、尽诸般的义</a>
+<a href="#c2">2、活着不是单靠食物</a>
+<a href="#c3">3、不可试探神</a>
+<a href="#c4">4、要单单侍奉神</a>
+<a href="#c5">5、人应当悔改</a>
+<a href="#c6">6、跟从耶稣得人如同得鱼</a>
+<a href="#c7">7、因耶稣遭迫害的人有福了</a>
+<a href="#c8">8、要做世上的盐和光</a>
+<a href="#c9">9、耶稣乃是要成全律法</a>
+<a href="#c10">10、不可发怒</a>
+
+</details>
+
+<details>
+<summary>② 分类检索</summary>
+
+<a href="#c2">信仰根基</a>
+<a href="#c6">使命与跟随</a>
+<a href="#c8">盐和光</a>
+<a href="#c10">生命品格</a>
+
+</details>
+
+<details>
+<summary>③ 生活处境专项检索</summary>
+
+<a href="#c2">忧愁不安</a>
+<a href="#c7">被逼迫</a>
+<a href="#c6">人生迷茫</a>
+<a href="#c10">人际冲突</a>
+
+</details>
+
+</div>
+
+<!-- 主体 -->
+
+<div class="layout">
+
+<!-- 左侧目录 -->
+
+<div class="sidebar">
+
+<h2>《耶稣语录》</h2>
+
+<h3>① 顺序阅读</h3>
+
+<a href="#c1">1、尽诸般的义</a>
+<a href="#c2">2、活着不是单靠食物</a>
+<a href="#c3">3、不可试探神</a>
+<a href="#c4">4、要单单侍奉神</a>
+<a href="#c5">5、人应当悔改</a>
+<a href="#c6">6、跟从耶稣得人如同得鱼</a>
+<a href="#c7">7、因耶稣遭迫害的人有福了</a>
+<a href="#c8">8、要做世上的盐和光</a>
+<a href="#c9">9、耶稣乃是要成全律法</a>
+<a href="#c10">10、不可发怒</a>
+
+<h3>② 分类检索</h3>
+
+<a href="#c2">信仰根基</a>
+<a href="#c6">使命与跟随</a>
+<a href="#c8">盐和光</a>
+<a href="#c10">生命品格</a>
+
+<h3>③ 生活处境专项检索</h3>
+
+<a href="#c2">忧愁不安</a>
+<a href="#c7">被逼迫</a>
+<a href="#c6">人生迷茫</a>
+<a href="#c10">人际冲突</a>
+
+</div>
+
+<!-- 右侧正文 -->
+
+<div class="content">
+
+<!-- 第一条 -->
+
+<div class="card" id="c1">
+
+<h2>1、尽诸般的义</h2>
+
+<div class="scripture">
+耶稣说：“你暂且许我，因为我们理当这样尽诸般的义。”
+（马太福音 3:15 和合本）
+</div>
+
+<div class="analysis-title">经文解析</div>
+
+<div class="section-title">一、提问</div>
+
+<p>
+为什么完全无罪的耶稣，还要接受约翰的洗礼？
+祂明明不需要悔改，为何却甘愿站在罪人当中？
+</p>
+
+<p>
+很多时候，人喜欢强调“我没错”，因此不愿降卑、不愿顺服。
+但耶稣却用行动告诉我们：真正的义，不只是自己无罪，更是愿意完全顺服天父的旨意。
+</p>
+
+<div class="section-title">二、定义</div>
+
+<p>
+“尽诸般的义”，就是完全遵行神的旨意，顺服神所设立的一切正确次序。
+</p>
+
+<p>
+耶稣接受洗礼，并不是因为祂有罪，而是为了认同罪人、成全救赎，并为世人树立顺服的榜样。
+</p>
+
+<div class="section-title">三、圣经例证</div>
+
+<p>
+约翰原本不敢为耶稣施洗，因为他知道耶稣是无罪的。
+但耶稣坚持顺服父神整个救赎计划。
+</p>
+
+<p>
+耶稣受洗之后，圣灵降下，天父发声说：“这是我的爱子，我所喜悦的。”
+这说明：真正蒙神喜悦的，不只是能力，而是顺服。
+</p>
+
+<div class="section-title">四、事实例证</div>
+
+<p>
+岳飞一生忠心尽责，即便面对压力，仍坚持自己的本分。
+相反，彼拉多虽然知道耶稣无罪，却因害怕群众而选择妥协。
+</p>
+
+<p>
+这让我们看见：真正的义，往往需要付代价。
+</p>
+
+<div class="section-title">五、常见误区</div>
+
+<p>
+<b>误区一：</b>
+只要心里相信神，顺不顺服无所谓。
+</p>
+
+<p>
+真正的信心，一定会带出顺服。
+</p>
+
+<p>
+<b>误区二：</b>
+只要没有犯罪，就是义人。
+</p>
+
+<p>
+然而耶稣显明：真正的义，不只是“不犯罪”，更是积极遵行神的旨意。
+</p>
+
+<div class="section-title">六、总结</div>
+
+<p>
+耶稣接受洗礼，不是因为祂有罪，而是因为祂愿意完全顺服父神。
+真正的义，不只是口中的道理，更是生命中的顺服。
+</p>
+
+<div class="section-title">七、呼召与祝愿</div>
+
+<p>
+愿我们不仅羡慕耶稣的能力，更愿意学习祂的顺服。
+愿我们一生所追求的，不是自己的荣耀，而是尽诸般的义。
+阿们！
+</p>
+
+<div class="bottom-nav">
+
+<span></span>
+
+<a href="#top">返回目录</a>
+
+<a href="#c2">下一篇 →</a>
+
+</div>
+
+</div>
+
+<!-- 第二条 -->
+
+<div class="card" id="c2">
+
+<h2>2、活着不是单靠食物</h2>
+
+<div class="scripture">
+耶稣说：“人活着，不是单靠食物，乃是靠神口里所出的一切话。”
+（马太福音 4:4 和合本）
+</div>
+
+<div class="analysis-title">经文解析</div>
+
+<div class="section-title">一、提问</div>
+
+<p>
+人活着真正需要的到底是什么？
+只有物质丰富，就算真正活着吗？
+</p>
+
+<div class="section-title">二、定义</div>
+
+<p>
+食物只能维持身体，神的话才能真正供应人的灵魂。
+</p>
+
+<div class="section-title">三、圣经例证</div>
+
+<p>
+以色列人在旷野依靠吗哪生活，神借此教导他们：人真正需要的是神。
+</p>
+
+<div class="section-title">四、事实例证</div>
+
+<p>
+现实中有些人虽然物质丰富，却依然空虚痛苦，因为灵魂失去了方向。
+</p>
+
+<div class="section-title">五、常见误区</div>
+
+<p>
+<b>误区一：</b>
+信仰不能当饭吃，所以不重要。
+</p>
+
+<p>
+然而，人若只有饭吃而没有真理，依旧会迷失。
+</p>
+
+<div class="section-title">六、总结</div>
+
+<p>
+身体需要粮食，灵魂更需要神的话语。
+</p>
+
+<div class="section-title">七、呼召与祝愿</div>
+
+<p>
+愿我们每天不但吃地上的粮，也渴慕天上的粮。
+阿们！
+</p>
+
+<div class="bottom-nav">
+
+<a href="#c1">← 上一篇</a>
+
+<a href="#top">返回目录</a>
+
+<a href="#c3">下一篇 →</a>
+
+</div>
+
+</div>
+
+<!-- 其余条目占位 -->
+
+<div class="card" id="c3">
+<h2>3、不可试探神</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c2">← 上一篇</a>
+<a href="#top">返回目录</a>
+<a href="#c4">下一篇 →</a>
+</div>
+</div>
+
+<div class="card" id="c4">
+<h2>4、要单单侍奉神</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c3">← 上一篇</a>
+<a href="#top">返回目录</a>
+<a href="#c5">下一篇 →</a>
+</div>
+</div>
+
+<div class="card" id="c5">
+<h2>5、人应当悔改</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c4">← 上一篇</a>
+<a href="#top">返回目录</a>
+<a href="#c6">下一篇 →</a>
+</div>
+</div>
+
+<div class="card" id="c6">
+<h2>6、跟从耶稣得人如得鱼</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c5">← 上一篇</a>
+<a href="#top">返回目录</a>
+<a href="#c7">下一篇 →</a>
+</div>
+</div>
+
+<div class="card" id="c7">
+<h2>7、因耶稣遭迫害的人有福了</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c6">← 上一篇</a>
+<a href="#top">返回目录</a>
+<a href="#c8">下一篇 →</a>
+</div>
+</div>
+
+<div class="card" id="c8">
+<h2>8、要做世上的盐和光</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c7">← 上一篇</a>
+<a href="#top">返回目录</a>
+<a href="#c9">下一篇 →</a>
+</div>
+</div>
+
+<div class="card" id="c9">
+<h2>9、耶稣乃是要成全律法</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c8">← 上一篇</a>
+<a href="#top">返回目录</a>
+<a href="#c10">下一篇 →</a>
+</div>
+</div>
+
+<div class="card" id="c10">
+<h2>10、不可发怒</h2>
+<p>（测试版占位内容）</p>
+<div class="bottom-nav">
+<a href="#c9">← 上一篇</a>
+<a href="#top">返回目录</a>
+<span></span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
